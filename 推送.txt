@@ -14,3 +14,10 @@ git add .
 git commit -m"版本更新"
 git push 
 git pull
+
+
+创建分支
+git bash     ---> 首先打开环境
+git branch   ---> 查看有哪几个分支
+git branch 分支名称   ---> 创建分支
+git branch  ---> 查看有哪几个分支（创建完成）
