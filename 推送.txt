@@ -12,7 +12,7 @@ git pull            --->拉取/同步远程仓库的代码到本地
 git status   ---> 查看本地状态跟远程仓库状态，如果没有同步，会显示没有同步的文件为红色
 git add .      
 git commit -m"版本更新"
-git push 
+git push  
 git pull
 
 
@@ -21,8 +21,13 @@ git bash     ---> 首先打开环境
 git branch   ---> 查看有哪几个分支
 git branch 分支名称   ---> 创建分支
 git branch  ---> 查看有哪几个分支（创建完成）
-git checkout 分支名 --->切换到某一分支
+git checkout 分支名 --->切换到某一分支   (git switch 分支名 -->注意：在 Git 2.23 版本中，引入了一个名为 git switch 的新命令，
+                                                               最终会取代 git checkout，因为 checkout 作为单个命令有点超载（它承载了很多独立的功能）
+                                                          -->对了，有个更简洁的方式：如果你想创建一个新的分支同时切换到新创建的分支的话，
+                                                               可以通过 git checkout -b 分支名  来实现。记住这里可checkout不能换成switch哦，错误语句 )
 git push origin 分支名 --->提交代码到指定分支
 
-git log    --->查看提交次数信息
+git rebase master  ---> 如此时正在*lyk分支，   该语句的意思是将lyk分支重基到master分支上，即是重新弄一个副本分支lyk到master分支上，从而实现合并。
+git merge master  --->如此时正在*lyk分支,  该语句的意思是将lyk分支合并到master分支上，即是lyk分支指向master分支  
+git log    --->查看提交次数信息。
 git reset --hard 回退的哈希数    --->回退到某个提交的那次版本信息
