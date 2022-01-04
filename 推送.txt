@@ -7,7 +7,7 @@ git push -u origin master     --->将本地项目上传至远程仓库
 git pull            --->拉取/同步远程仓库的代码到本地
 
 
-更新：
+版本更新：
 
 git status   ---> 查看本地状态跟远程仓库状态，如果没有同步，会显示没有同步的文件为红色
 git add .      
@@ -21,3 +21,5 @@ git bash     ---> 首先打开环境
 git branch   ---> 查看有哪几个分支
 git branch 分支名称   ---> 创建分支
 git branch  ---> 查看有哪几个分支（创建完成）
+git checkout 分支名 --->切换到某一分支
+git push origin 分支名 --->提交代码到指定分支
