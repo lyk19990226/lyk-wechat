@@ -23,3 +23,6 @@ git branch 分支名称   ---> 创建分支
 git branch  ---> 查看有哪几个分支（创建完成）
 git checkout 分支名 --->切换到某一分支
 git push origin 分支名 --->提交代码到指定分支
+
+git log    --->查看提交次数信息
+git reset --hard 回退的哈希数    --->回退到某个提交的那次版本信息
