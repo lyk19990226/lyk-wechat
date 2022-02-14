@@ -2,10 +2,11 @@
   "pages": [
     "pages/home-music/index",
     "pages/home-video/index",
-    "components/video-item-v1/index"
+    "components/video-item-v1/index",
+    "pages/detail-video/index"
   ],
   "window": {
-    "backgroundColor":"#000",
+    "backgroundColor": "#000",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Lyk的网易云音乐",
     "navigationBarTextStyle": "black"

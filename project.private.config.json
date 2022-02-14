@@ -17,6 +17,12 @@
           "pathName": "pages/home-video/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "detail-video",
+          "pathName": "pages/detail-video/index",
+          "query": "id=14473730&name=lyk",
+          "scene": null
         }
       ]
     }
