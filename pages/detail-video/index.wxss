@@ -28,19 +28,23 @@ page{
 }
 
 .related-video{
-
+  
 }
 .related-detail{
   display: flex;
-  margin-bottom:14rpx;
+  justify-content: space-between;
+  margin-bottom:18rpx;
 }
 .related-img{
   border-radius: 10rpx;
-  width:180px;
+  width:39%;
 }
 .related-data{
- 
+  width:58%;
 }
 .related-title{
-  width:100%;
+  
+}
+.related-name{
+  
 }

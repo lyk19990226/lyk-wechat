@@ -23,7 +23,7 @@
   <view class="related-video">
     <view wx:for="{{relatedVideos}}" class="related-detail">
       <image class="related-img" src="{{item.coverUrl}}" mode="widthFix"></image>
-      <view class="ralated-data">
+      <view class="related-data">
         <view class="related-tilte">{{item.title}}</view>
         <view class="related-name">{{item.creator[0].userName}}</view>
       </view>
