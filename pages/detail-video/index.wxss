@@ -1,1 +1,46 @@
 /* pages/detail-video/index.wxss */
+page{
+  padding-top:225px;
+}
+.video {
+  width:100%;
+  position: fixed;
+  top:0
+}
+.video-detail{
+  padding:0 24rpx;
+}
+.mv-detail{
+  margin:40rpx 0 45rpx 0;
+}
+.mv-title{
+  font-size:34rpx;
+  font-weight: bold;
+}
+.mv-name{
+  margin:14rpx 0;
+  font-size:27rpx;
+  color:rgb(104, 102, 102);
+}
+.mv-data{
+  font-size: 28rpx;
+  color:rgb(104, 102, 102);
+}
+
+.related-video{
+
+}
+.related-detail{
+  display: flex;
+  margin-bottom:14rpx;
+}
+.related-img{
+  border-radius: 10rpx;
+  width:180px;
+}
+.related-data{
+ 
+}
+.related-title{
+  width:100%;
+}

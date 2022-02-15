@@ -8,7 +8,21 @@ Page({
   data: {
     mvURLInfo:{},
     mvDetail:{},
-    relatedVideos:{}
+    relatedVideos:{},
+    danmuList://模拟的弹幕
+    [{
+      text: '第 1s 出现的弹幕',
+      color: '#ff0000',
+      time: 1
+    }, {
+      text: '第 3s 出现的弹幕',
+      color: '#ff00ff',
+      time: 3
+    }, {
+      text: '牛逼，太好听了',
+      color: '#ff00ff',
+      time: 2
+    }],
   },
 
   /**
