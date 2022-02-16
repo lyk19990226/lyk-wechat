@@ -6,8 +6,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    message:"",
+    message1:"",
     mvURLInfo:{},
-    mvDetail:{},
+    mvDetail:{
+      playCount:""
+    },
     relatedVideos:{},
     danmuList://模拟的弹幕
     [{
@@ -37,19 +41,24 @@ Page({
     
     // 其他逻辑
   },
-  getPageData(id){
+  async getPageData(id){
     //1.请求播放地址
-    getMVURL(id).then(res=>{
+    await getMVURL(id).then(res=>{
       console.log(res)
       this.setData({mvURLInfo:res.data})
-    })
-    //2.请求视频详情信息
-    getMVDetail(id).then(res=>{
-      this.setData({mvDetail:res.data})
     })
     //3.请求相关视频
     getRelatedVideo(id).then(res=>{
       this.setData({relatedVideos:res.data})
     })
+
+    //2.请求视频详情信息
+    await getMVDetail(id).then(res=>{
+      this.setData({mvDetail:res.data})
+    })
+
+    this.setData({message:"次播放 -"})
+    this.setData({message1:"推荐视频"})
+    
   }
 })

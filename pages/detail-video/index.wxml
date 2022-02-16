@@ -17,14 +17,19 @@
   <view class="mv-detail">
     <view class="mv-title">{{mvDetail.name}}</view>
     <view class="mv-name">{{mvDetail.artistName}}</view>
-    <view class="mv-data">{{format.countFormat(mvDetail.playCount)}}次播放 - {{mvDetail.publishTime}}</view>
+    <view class="mv-data">{{format.countFormat(mvDetail.playCount)}}{{message}} {{mvDetail.publishTime}}</view>
   </view>
-  <view style="font-weight:550;font-size:32rpx;margin:14rpx 0 18rpx 0;">推荐视频</view>
+  <view style="font-weight:550;font-size:32rpx;margin:14rpx 0 18rpx 0;">{{message1}}</view>
   <view class="related-video">
     <view wx:for="{{relatedVideos}}" class="related-detail">
-      <image class="related-img" src="{{item.coverUrl}}" mode="widthFix"></image>
+      <view class="related-image">
+        <image class="related-img" src="{{item.coverUrl}}" mode="widthFix"></image>
+        <view class="count-img">
+          <text class="count">{{format.countFormat(item.playTime)}}</text>
+        </view>
+      </view> 
       <view class="related-data">
-        <view class="related-tilte">{{item.title}}</view>
+        <view class="related-title">{{item.title}}</view>
         <view class="related-name">{{item.creator[0].userName}}</view>
       </view>
     </view> 
