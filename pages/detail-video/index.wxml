@@ -10,7 +10,8 @@
        show-screen-lock-button 
        danmu-list="{{danmuList}}" 
        danmu-btn 
-       enable-danmu></video>
+       enable-danmu
+       muted></video>
 
 <!-- <view wx:for="{{100}}">{{item}}</view> -->
 <view class="video-detail">
@@ -21,8 +22,8 @@
   </view>
   <view style="font-weight:550;font-size:32rpx;margin:14rpx 0 18rpx 0;">{{message1}}</view>
   <view class="related-video">
-    <view wx:for="{{relatedVideos}}" class="related-detail">
-      <view class="related-image">
+    <view wx:for="{{relatedVideos}}" wx:key="id" class="related-detail" >
+      <view class="related-image" bindtap="handleDetailGo">
         <image class="related-img" src="{{item.coverUrl}}" mode="widthFix"></image>
         <view class="count-img">
           <text class="count">{{format.countFormat(item.playTime)}}</text>
