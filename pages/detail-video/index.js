@@ -58,7 +58,14 @@ Page({
     })
 
     this.setData({message:"次播放 -"})
-    this.setData({message1:"推荐视频"})
+    this.setData({message1:"推荐视频"}) 
     
+  },
+  handleDetailGo(){//相关视频也可以跳转
+    const items = [14486319,14503206,14482826,14502979,14485901,14495975]
+    const id = items[Math.floor(Math.random() * items.length)]
+    wx.navigateTo({
+      url:'/pages/detail-video/index?id='+id+'&name=lyk'
+    })
   }
 })

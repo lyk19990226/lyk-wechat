@@ -61,7 +61,7 @@ Page({
     // console.log(event)  
     // 获取id
     const id = event.currentTarget.dataset.item.id
-    // console.log(id)
+    console.log(id)
     // 页面跳转 
     wx.navigateTo({
       url:'/pages/detail-video/index?id='+id+'&name=lyk'
