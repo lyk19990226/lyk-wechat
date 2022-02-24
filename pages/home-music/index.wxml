@@ -1,2 +1,9 @@
 <!--pages/home-music/index.wxml-->
-<view>home-music</view>
+<van-search 
+  disabled
+  background="#fafafa"
+  shape="round"
+  placeholder="请输入搜索的音乐"
+  bind:click-input="handleSearchClick"/>
+
+ 
