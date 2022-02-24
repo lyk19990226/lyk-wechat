@@ -10,7 +10,8 @@
        show-screen-lock-button 
        danmu-list="{{danmuList}}" 
        danmu-btn 
-       enable-danmu></video>
+       enable-danmu
+       muted></video>
 
 <!-- <view wx:for="{{100}}">{{item}}</view> -->
 <view class="video-detail">
