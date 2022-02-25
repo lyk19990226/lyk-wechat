@@ -27,7 +27,6 @@ Page({
 
   //事件处理
   handleSearchClick() { //搜索框点击事件
-
     // wx.navigateTo({
     //   url: '/pages/detail-search/index',
     // })

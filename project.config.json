@@ -43,7 +43,6 @@
     "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.18.0",
   "appid": "wx5c7bfed2b229338f",
   "projectname": "LykMusic",
   "debugOptions": {
