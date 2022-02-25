@@ -1,2 +1,26 @@
-<!--pages/home-music/index.wxml-->
-<view>home-music</view>
+<!--搜索框-->
+<van-search 
+  disabled="{{disabled}}"
+  background="#fafafa"
+  shape="round"
+  placeholder="请输入搜索的音乐-学到第三节课1小时40分钟"
+  bind:click-input="handleSearchClick"/>
+<!-- 轮播图 -->
+<swiper class="swiper"
+        indicator-dots
+        autoplay 	
+        interval="2000" 
+        circular
+        indicator-active-color="white"
+        style="height: {{swiperHeight}}px;">
+  <block wx:for="{{banners}}" wx:key="bannerId">
+    <swiper-item class="swiper-item">
+      <image class="swiper-image" 
+             mode="widthFix" 
+             src="{{item.pic}}" 
+             bindload="handleSwiperImageLoaded"></image>
+    </swiper-item>
+  </block>
+  
+</swiper>
+ 

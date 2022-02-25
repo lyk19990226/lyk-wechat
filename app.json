@@ -3,7 +3,8 @@
     "pages/home-music/index",
     "pages/home-video/index",
     "components/video-item-v1/index",
-    "pages/detail-video/index"
+    "pages/detail-video/index",
+    "pages/detail-search/index"
   ],
   "window": {
     "backgroundColor": "#000",
@@ -27,7 +28,6 @@
       }
     ]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
 }

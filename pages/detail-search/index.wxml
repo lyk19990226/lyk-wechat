@@ -1,0 +1,7 @@
+<!--pages/detail-search/index.wxml-->
+<van-search 
+  show-action
+  focus
+  background="#fafafa"
+  shape="round"
+  placeholder="请输入搜索的音乐"/>

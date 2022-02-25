@@ -1,66 +1,51 @@
 // pages/home-music/index.js
+import {
+  getBanners
+} from '../../service/api_music'
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    disabled: true,
+    banners: [],
+    swiperHeight: 0 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    //获取页面数据
+    this.getPageData()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  //调用接口
+  getPageData: function () {
+    getBanners().then(res => {
+      console.log(res)
+      this.setData({
+        banners: res.banners
+      })
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  //事件处理
+  handleSearchClick() { //搜索框点击事件
 
+    // wx.navigateTo({
+    //   url: '/pages/detail-search/index',
+    // })
+    this.setData({
+      disabled: false
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleSwiperImageLoaded() { //监听图片加载完成
+    const query = wx.createSelectorQuery()
+    query.select('.swiper-image').boundingClientRect()
+    // query.selectViewport().scrollOffset()
+    query.exec(res => {
+      const rect = res[0] 
+      console.log(rect.height)
+      this.setData({
+        swiperHeight:rect.height
+      })
+    })
   }
 })
