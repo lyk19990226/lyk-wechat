@@ -7,9 +7,6 @@ page{
 }
 
 /* 轮播图 */
-.swiper-item{
-
-}
 .swiper-item .swiper-image{
   width: 100%;
 }

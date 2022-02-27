@@ -54,6 +54,7 @@
     "servePath": ""
   },
   "isGameTourist": false,
+  "libVersion": "2.18.0",
   "condition": {
     "search": {
       "list": []

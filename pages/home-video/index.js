@@ -1,6 +1,5 @@
 // pages/home-video/index.js
 import {getTopMV} from "../../service/api_video"
-
 Page({
 
   /**

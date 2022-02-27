@@ -1,7 +1,9 @@
 // pages/home-music/index.js
-import {
-  getBanners
-} from '../../service/api_music'
+import {getBanners} from '../../service/api_music'
+import queryRect from '../../utils/query-rect'
+import Throttle from '../../utils/throttle'
+
+const ThrottleQueryRect = Throttle(queryRect)
 
 Page({
   data: {
@@ -13,12 +15,12 @@ Page({
   onLoad: function (options) {
     //获取页面数据
     this.getPageData()
+   
   },
 
   //调用接口
   getPageData: function () {
-    getBanners().then(res => {
-      console.log(res)
+    getBanners().then(res => {//获取轮播图片
       this.setData({
         banners: res.banners
       })
@@ -36,14 +38,11 @@ Page({
   },
 
   handleSwiperImageLoaded() { //监听图片加载完成
-    const query = wx.createSelectorQuery()
-    query.select('.swiper-image').boundingClientRect()
-    // query.selectViewport().scrollOffset()
-    query.exec(res => {
-      const rect = res[0] 
-      console.log(rect.height)
+    //获取图片的高度
+    ThrottleQueryRect(".swiper-image").then(res => {//图片加载完成调用使用节流函数，调用一次
+      console.log(res)
       this.setData({
-        swiperHeight:rect.height
+        swiperHeight:res[0].height
       })
     })
   }
