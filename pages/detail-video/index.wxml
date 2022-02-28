@@ -11,7 +11,8 @@
        danmu-list="{{danmuList}}" 
        danmu-btn 
        enable-danmu
-       muted></video>
+       muted
+       referrer-policy="origin"></video>
 
 <!-- <view wx:for="{{100}}">{{item}}</view> -->
 <view class="video-detail">

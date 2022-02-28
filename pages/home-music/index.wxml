@@ -1,15 +1,14 @@
 <!--搜索框-->
 <van-search 
-  disabled="{{disabled}}"
   background="#fafafa"
   shape="round"
-  placeholder="请输入搜索的音乐-请输入搜索的音乐-开始学第四节"
+  placeholder="请输入搜索的音乐-开始学第四节:26分钟"
   bind:click-input="handleSearchClick"/>
 <!-- 轮播图 -->
 <swiper class="swiper"
         indicator-dots
         autoplay 	
-        interval="2500" 
+        interval="3600" 
         circular
         indicator-active-color="white"
         style="height: {{swiperHeight}}px;">
@@ -21,6 +20,8 @@
              bindload="handleSwiperImageLoaded"></image>
     </swiper-item>
   </block>
-  
 </swiper>
- 
+<!-- 推荐歌曲 -->
+<view class="recommend-song">
+  <area-header title="推荐歌曲"></area-header>
+</view>
