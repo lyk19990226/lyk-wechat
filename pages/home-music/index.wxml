@@ -2,7 +2,7 @@
 <van-search 
   background="#fafafa"
   shape="round"
-  placeholder="请输入搜索的音乐-开始学第四节:26分钟"
+  placeholder="请输入搜索的音乐-开始学第五节"
   bind:click-input="handleSearchClick"/>
 <!-- 轮播图 -->
 <swiper class="swiper"
@@ -24,4 +24,9 @@
 <!-- 推荐歌曲 -->
 <view class="recommend-song">
   <area-header title="推荐歌曲"></area-header>
+  <view class="song-list">
+    <block wx:for="{{recommendSongs}}" wx:key="id">
+      <song-item-v1 item="{{item}}"></song-item-v1>
+    </block>
+  </view>
 </view>

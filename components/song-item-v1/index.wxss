@@ -1,0 +1,29 @@
+/* components/song-item-v1/index.wxss */
+.item{
+  display: flex;
+  padding:10px 0;
+  align-items: center;
+}
+.item .image {
+  width:66px;
+  border-radius: 9px;
+}
+.content {
+  margin-left: 16rpx;
+  flex-grow: 1;
+}
+.content .name {
+  font-size: 32rpx;
+  color: #555;
+}
+
+.content .source {
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.arrow .icon {
+  width:45rpx;
+  height:45rpx;
+}
